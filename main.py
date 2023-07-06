@@ -20,7 +20,6 @@ import tools.sbertWithcon
 import tools.sbertWithfaiss
 from pprint import pprint
 from langchain import OpenAI, ConversationChain
-openai.api_key = "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"
 import MeCab
 # 環境変数を設定
 import os
