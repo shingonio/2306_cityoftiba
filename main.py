@@ -28,6 +28,7 @@ os.environ["OPENAI_API_KEY"] = openai.api_key
 
 
 
+
 chat = ChatOpenAI(temperature=0.0)
 def youyaku(prompt):
     response = openai.Completion.create(
