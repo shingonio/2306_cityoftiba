@@ -23,10 +23,18 @@ from langchain import OpenAI, ConversationChain
 import MeCab
 # 環境変数を設定
 import os
+import openai
+from llama_index.indices.document_summary import GPTDocumentSummaryIndex
+from langchain.chat_models import ChatOpenAI
+openai.api_key = ""
+
+
+
+
+# 環境変数を設定
+import os
 os.environ["OPENAI_API_KEY"] = openai.api_key
-# ChatOpenAIクラスのインスタンスを作成、temperatureは0.7を指定
-
-
+from langchain.text_splitter import CharacterTextSplitter
 
 
 chat = ChatOpenAI(temperature=0.0)
