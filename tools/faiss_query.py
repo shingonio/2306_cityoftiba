@@ -3,7 +3,7 @@ import nest_asyncio
 nest_asyncio.apply()
 import openai
 
-openai.api_key = "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"
+openai.api_key = ""
 from langchain.vectorstores import FAISS
 from langchain.embeddings.openai import OpenAIEmbeddings
 
