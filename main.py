@@ -20,11 +20,11 @@ import tools.sbertWithcon
 import tools.sbertWithfaiss
 from pprint import pprint
 from langchain import OpenAI, ConversationChain
-import MeCab
+#import MeCab
 # 環境変数を設定
 import os
 import openai
-from llama_index.indices.document_summary import GPTDocumentSummaryIndex
+#from llama_index.indices.document_summary import GPTDocumentSummaryIndex
 from langchain.chat_models import ChatOpenAI
 openai.api_key = ""
 
@@ -37,7 +37,7 @@ os.environ["OPENAI_API_KEY"] = openai.api_key
 from langchain.text_splitter import CharacterTextSplitter
 
 
-chat = ChatOpenAI(temperature=0.0)
+#chat = ChatOpenAI(temperature=0.0)
 def youyaku(prompt):
     response = openai.Completion.create(
     # エンジンを指定
