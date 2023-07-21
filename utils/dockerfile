@@ -1,7 +1,10 @@
 #dockerfile
-FROM torchvision
+FROM pytorch/torchserve
+USER root
+RUN chmod 777 -R .
 RUN python -m pip install --upgrade pip
-RUN pip install -r requirements.txts
-#start the server with model named SBERT
+COPY requirements.txt . 
+RUN pip install -r requirements.txt
+COPY /z55 .
 COPY sbert_main2.py .
 CMD python sbert_main2.py 
