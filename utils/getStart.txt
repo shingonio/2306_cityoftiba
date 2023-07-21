@@ -1,0 +1,11 @@
+以下の手順でテストが開始できます。
+
+1 docker image 構築
+　例　docker build -t sbert:v1 .
+２docker　 起動
+ 例　 docker run -d --rm -it -p 3100:8082 sbert:v1
+3. dockerコンテナ内に入る
+　例　docker container exec -it コンテナID  bash
+＊　コンテナIDは2番のプロセスを確認
+４　テストスクリプト実行
+　　python3 sbert_main2.py

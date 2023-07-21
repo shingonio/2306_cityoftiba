@@ -1,15 +1,17 @@
-import os
-import logging
+
+import csv
 import os
 import time
-from typing import List, Tuple, Callable, Any, Dict
+from typing import List, Tuple, Callable, Any, Dict, Optional
+import logging
+import sys
 
 import faiss
 import numpy as np
 import psutil
-from bs4 import BeautifulSoup
 from sentence_transformers import SentenceTransformer
-
+from bs4 import BeautifulSoup
+import torch
 
 class ScalableSemanticSearch:
     def __init__(self, device="cpu"):
@@ -148,7 +150,7 @@ def pickup_context(load_path):
     return meta_keyword,meta_description,title,body
 
 def main():
-    root_dir = './z55'
+    root_dir = './chiba-city.mamafre.jp'
     title_list = []
     meta_keyword_list = []
     meta_description_list = []
@@ -190,7 +192,7 @@ def main():
         print(top_sentences[2][:300])
         print(meta_description_list[top_indices[2]])
 
-        comm = input("You: ")
+        command= input("You: ")
 
         if command == "exit":
             break

@@ -1,10 +1,12 @@
 #dockerfile
-FROM pytorch/torchserve
+FROM ubuntu 
 USER root
-RUN chmod 777 -R .
-RUN python -m pip install --upgrade pip
+RUN apt update
+RUN apt install -y python3.10
+RUN apt install -y python3-pip
+RUN /usr/bin/python3  -m pip install --upgrade pip
 COPY requirements.txt . 
 RUN pip install -r requirements.txt
 COPY /z55 .
 COPY sbert_main2.py .
-CMD python sbert_main2.py 
+#CMD /usr/bin/python3 sbert_main2.py 
