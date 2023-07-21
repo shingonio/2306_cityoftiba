@@ -1,18 +1,15 @@
-
-import csv
+import os
+import logging
 import os
 import time
-from typing import List, Tuple, Callable, Any, Dict, Optional
-import logging
-import sys
+from typing import List, Tuple, Callable, Any, Dict
 
 import faiss
 import numpy as np
 import psutil
-from sentence_transformers import SentenceTransformer
-import matplotlib.pyplot as plt
 from bs4 import BeautifulSoup
-import torch
+from sentence_transformers import SentenceTransformer
+
 
 class ScalableSemanticSearch:
     def __init__(self, device="cpu"):

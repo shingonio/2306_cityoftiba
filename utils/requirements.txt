@@ -1,0 +1,5 @@
+#requirements.txt
+sentence-transformers==0.4.1.2
+faiss-cpu
+psutil
+beautifulsoup4

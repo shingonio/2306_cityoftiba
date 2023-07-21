@@ -1,0 +1,7 @@
+#dockerfile
+FROM torchvision
+RUN python -m pip install --upgrade pip
+RUN pip install -r requirements.txts
+#start the server with model named SBERT
+COPY sbert_main2.py .
+CMD python sbert_main2.py 
